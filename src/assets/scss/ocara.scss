@@ -1,0 +1,185 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+
+$font-family-sans-serif: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$headings-font-weight: 700;
+
+$primary: #00666d;
+$secondary: #ffcb45;
+$success: #27897c;
+$info: #72aeba;
+$warning: #bb7929;
+$danger: #e16c55;
+$light: #fdfdf1;
+$dark: #060705;
+
+// Variables
+@import "../../../node_modules/bootstrap/scss/variables";
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/open-sans.ttf") format("truetype");
+}
+
+.visually-hidden-focusable:focus {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: $danger;
+  color: $white;
+  text-decoration: none;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.banner {
+  &-control {
+    height: 33.3333%;
+
+    &:active {
+      background-color: scale-color($primary, $alpha: -20%);
+    }
+  }
+
+  &-image {
+    img {
+      width: 100%;
+      height: 24rem;
+      object-fit: cover;
+    }
+  }
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  margin-top: 7rem;
+}
+
+.club {
+  &-cover {
+    object-fit:cover;
+    width:100%;
+    height:16rem;
+  }
+
+  &-picture {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @media (min-width: map-get($grid-breakpoints, "lg")) {
+      position: relative;
+      left: auto;
+      transform: translate(30%, -50%);
+    }
+
+    @media (min-width: map-get($grid-breakpoints, "xl")) {
+      width: 12rem;
+      height: 12rem;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, "xxl")) {
+      transform: translate(40%, -50%);
+    }
+  }
+
+  &-meta {
+    margin-top: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: map-get($grid-breakpoints, "lg")) {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.tab-button {
+  border: none;
+
+  &.active {
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.meetup {
+  &-cover {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+  }
+
+  &-calendar {
+    width: 5.5rem;
+    height: 5rem;
+
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      height: auto;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, "lg")) {
+      width: 6rem;
+    }
+  }
+
+  &-profile {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &-previous-item {
+    @media (min-width: map-get($grid-breakpoints, "lg")) {
+      width: 75%;
+    }
+  }
+
+  &-review-cover {
+    @media (min-width: map-get($grid-breakpoints, "lg")) {
+      width: 40%;
+    }
+  }
+
+  &-review-description {
+    @media (min-width: map-get($grid-breakpoints, "lg")) {
+      width: 60%;
+    }
+  }
+}
+
+.rating {
+  padding: 0.1rem;
+
+  &-positive {
+    color: $yellow-400;
+  }
+
+  &-negative {
+
+  }
+}
+
+.picture {
+  &-highlight {
+    &__image {
+      height: 24rem;
+    }
+  }
+
+  &-control {
+    cursor: pointer;
+
+    &__image {
+      height: 5rem;
+    }
+  }
+}
+
+// Layout & components
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+@import "../../../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
